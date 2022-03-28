@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEY-F6-Gg0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Snaps-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainScreen" id="Y6W-OH-hqX" customClass="MainScreenViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Snaps" id="emw-U6-wxA">
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="LST-mg-PCY">
+                            <connections>
+                                <action selector="sair:" destination="Y6W-OH-hqX" id="cKW-HO-5RA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JmN-yr-VyT">
+                            <connections>
+                                <segue destination="aEg-Lh-GmI" kind="show" id="CuE-dK-CPg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="81.696428571428569"/>
+        </scene>
+        <!--Fotos View Controller-->
+        <scene sceneID="vWi-nx-iwi">
+            <objects>
+                <viewController id="aEg-Lh-GmI" customClass="FotosViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oaP-bQ-hFs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padrao" translatesAutoresizingMaskIntoConstraints="NO" id="5RC-p3-3jT">
+                                <rect key="frame" x="87" y="122" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="72T-hR-B1S"/>
+                                    <constraint firstAttribute="height" constant="128" id="um4-7R-A4J"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUt-9P-a19">
+                                <rect key="frame" x="87" y="269" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r25-Nr-zbq">
+                                <rect key="frame" x="147" y="339" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.55294117649999996" green="0.36862745099999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1g5-8Q-Bb5"/>
+                                    <constraint firstAttribute="width" constant="120" id="eh1-7W-bKL"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Próximo"/>
+                                <connections>
+                                    <action selector="proximoPasso:" destination="aEg-Lh-GmI" eventType="touchUpInside" id="o5I-es-nkH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JD6-5d-UIA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r25-Nr-zbq" firstAttribute="centerX" secondItem="eUt-9P-a19" secondAttribute="centerX" id="Ekz-4Q-08H"/>
+                            <constraint firstItem="5RC-p3-3jT" firstAttribute="top" secondItem="JD6-5d-UIA" secondAttribute="top" constant="34" id="In0-kh-Y0R"/>
+                            <constraint firstItem="5RC-p3-3jT" firstAttribute="centerX" secondItem="oaP-bQ-hFs" secondAttribute="centerX" id="diB-qR-w8I"/>
+                            <constraint firstItem="r25-Nr-zbq" firstAttribute="top" secondItem="eUt-9P-a19" secondAttribute="bottom" constant="36" id="gb7-Wb-Nxc"/>
+                            <constraint firstItem="eUt-9P-a19" firstAttribute="width" secondItem="5RC-p3-3jT" secondAttribute="width" id="mdn-QS-8dv"/>
+                            <constraint firstItem="eUt-9P-a19" firstAttribute="top" secondItem="5RC-p3-3jT" secondAttribute="bottom" constant="19" id="slr-ka-Scn"/>
+                            <constraint firstItem="eUt-9P-a19" firstAttribute="centerX" secondItem="5RC-p3-3jT" secondAttribute="centerX" id="x63-4j-pfF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5FM-Cg-1K6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="djg-2G-ZCe">
+                            <connections>
+                                <action selector="selecionarFoto:" destination="aEg-Lh-GmI" id="Mkp-fT-sak"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="botaoProximo" destination="r25-Nr-zbq" id="Pki-3s-681"/>
+                        <outlet property="descricao" destination="eUt-9P-a19" id="aXo-eK-FLd"/>
+                        <outlet property="imagem" destination="5RC-p3-3jT" id="ElP-Vz-v5j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gh-Gd-rMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="82"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uGx-dQ-iTX">
+            <objects>
+                <viewController id="RQD-gL-mg4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aqL-il-y2c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TsQ-TJ-nVp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Fs-1U-TYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tC9-a2-nFD">
+            <objects>
+                <navigationController storyboardIdentifier="navControllerMain" automaticallyAdjustsScrollViewInsets="NO" id="mEY-F6-Gg0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l6r-6B-Nbi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Hc1-2W-9wc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Czj-2V-GG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="padrao" width="500" height="446"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
